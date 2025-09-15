@@ -1,0 +1,262 @@
+<!-- archivo: index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Jure Travel — Viajar es vivir dos veces</title>
+  <meta name="description" content="Jure Travel: asesoría personalizada, paquetes al Caribe, Europa, Argentina y experiencias como Fórmula 1.">
+  <link rel="preload" as="style" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  <meta property="og:title" content="Jure Travel" />
+  <meta property="og:description" content="Viajar es vivir dos veces. Asesoría personalizada y experiencias únicas." />
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <!-- ============ Header fijo con menú hamburguesa ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand" aria-label="Inicio Jure Travel">Jure Travel</a>
+
+      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-nav" class="nav" data-state="closed">
+        <ul>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#quienes">Quiénes somos</a></li>
+          <li><a href="#pagos">Pagos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ Hero / Banner con Video ============ -->
+    <section class="hero" id="hero" aria-label="Banner principal">
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="img/bannerCaribe.mp4" type="video/mp4">
+        Tu navegador no soporta el video en HTML5.
+      </video>
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content container">
+        <!-- Logo circular transparente (marca de agua) -->
+        <img class="hero-logo-circle" src="img/juretravellogo.jfif" alt="" aria-hidden="true">
+
+        <h1 class="hero-title">Viajar es vivir dos veces.</h1>
+        <p class="hero-subtitle">Asesoría personalizada para que tu próxima experiencia sea perfecta.</p>
+        <a id="cta-hero" class="btn btn-accent" href="#" rel="noopener">Consultar por WhatsApp</a>
+      </div>
+    </section>
+
+    <!-- ============ Servicios (cards) ============ -->
+    <section class="section container" id="servicios" aria-labelledby="servicios-title">
+      <h2 id="servicios-title" class="section-title">Servicios y destinos</h2>
+      <div class="cards">
+        <!-- Caribe -->
+        <article class="card">
+          <img src="img/caribe1.jpg" loading="lazy" width="640" height="427">
+          <div class="card-body">
+            <h3 class="card-title">Caribe</h3>
+            <p class="card-text">Playas soñadas, all inclusive y experiencias únicas todo el año.</p>
+            <a class="btn btn-primary w-100 wa" data-wa="Caribe" href="#">Consultar por WhatsApp</a>
+          </div>
+        </article>
+        <!-- Europa -->
+        <article class="card">
+          <img src="img/pariseuropa.jpg" alt="Paisaje urbano clásico de Europa" loading="lazy" width="640" height="427">
+          <div class="card-body">
+            <h3 class="card-title">Europa</h3>
+            <p class="card-text">Historia, cultura y gastronomía en itinerarios a tu medida.</p>
+            <a class="btn btn-primary w-100 wa" data-wa="Europa" href="#">Consultar por WhatsApp</a>
+          </div>
+        </article>
+        <!-- Argentina -->
+        <article class="card">
+          <img src="img/argentinatravel.jpg" alt="Montañas y valles de Argentina" loading="lazy" width="640" height="427">
+          <div class="card-body">
+            <h3 class="card-title">Argentina</h3>
+            <p class="card-text">Norte, sur, vinos, nieve y mucho más. Redescubrí lo local.</p>
+            <a class="btn btn-primary w-100 wa" data-wa="Argentina" href="#">Consultar por WhatsApp</a>
+          </div>
+        </article>
+        <!-- Fórmula 1 -->
+        <article class="card">
+          <img src="img/f1.jpg" alt="Circuito de Fórmula 1" loading="lazy" width="640" height="427">
+          <div class="card-body">
+            <h3 class="card-title">Fórmula 1</h3>
+            <p class="card-text">Paquetes para vivir la F1 en vivo: vuelo, hotel y entradas.</p>
+            <a class="btn btn-primary w-100 wa" data-wa="Fórmula 1" href="#">Consultar por WhatsApp</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ Quiénes somos ============ -->
+    <section class="section section-alt" id="quienes" aria-labelledby="quienes-title">
+      <div class="container">
+        <h2 id="quienes-title" class="section-title">Quiénes somos</h2>
+        <p>En <strong>Jure Travel</strong> armamos tu viaje como si fuera el nuestro. Combinamos experiencia, atención personalizada y proveedores confiables para que disfrutes sin preocupaciones.</p>
+        <p>Te acompañamos en cada paso: desde la idea, la elección de destinos y seguros, hasta el seguimiento durante tu viaje y tu regreso.</p>
+      </div>
+    </section>
+
+    <!-- ============ Pagos ============ -->
+    <section class="section section-alt" id="pagos" aria-labelledby="pagos-title">
+      <div class="container pagos">
+        <h2 id="pagos-title" class="section-title">Datos de pago</h2>
+        <p class="muted">Usá estos datos para transferencias/depósitos de forma rápida y segura.</p>
+
+        <div class="owner">
+          <p><strong>Titular:</strong> <span id="owner-name">Matías Jure</span></p>
+          <p><strong>CUIL:</strong> <span id="owner-cuil">20-12345678-3</span></p>
+        </div>
+
+        <div class="copy-row">
+          <button class="btn btn-ghost" data-copy="#alias-text">Copiar alias</button>
+          <span id="alias-text" class="mono">juretravel.alias</span>
+        </div>
+        <p class="sr-only" aria-live="polite" id="copy-feedback"></p>
+      </div>
+    </section>
+
+    <!-- ============ Contacto / CTA secundario ============ -->
+    <section class="section container" id="contacto" aria-label="Contacto">
+      <div class="cta-box">
+        <h2 class="section-title">¿Listo para viajar?</h2>
+        <p>Escribinos por WhatsApp y te asesoramos al instante.</p>
+        <a id="cta-contacto" class="btn btn-accent" href="#" rel="noopener">Abrir WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> t-laser. Todos los derechos reservados.</p>
+      <nav aria-label="Redes">
+        <ul class="footer-links">
+          <li><a href="#" aria-label="Instagram">Instagram</a></li>
+          <li><a href="#" aria-label="Facebook">Facebook</a></li>
+          <li><a href="mailto:contacto@juretravel.com" aria-label="Email">Email</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- ============ JS mínimo (robusto) ============ -->
+  <script>
+    // ===== Variables editables =====
+    const WHATSAPP_NUMBER_E164 = '5493812061066'; // sin "+"
+    const WHATSAPP_MSG_BASE = 'Hola Jure Travel 👋, quiero hacer una consulta.';
+    const OWNER_NAME = 'Matías Jure';
+    const OWNER_CUIL = '20-12345678-3';
+    const ALIAS_PAGO = 'juretravel.alias';
+
+    // Utilidades
+    const $id = (x) => document.getElementById(x);
+    const setHrefIfExists = (id, href) => { const el = $id(id); if (el) el.href = href; };
+    const setTextIfExists = (id, text) => { const el = $id(id); if (el) el.textContent = text; };
+
+    // Compensación de anclas bajo header fijo
+    document.querySelectorAll('section, .section-title').forEach(el => {
+      el.style.scrollMarginTop = '80px';
+    });
+
+    // Menú hamburguesa accesible
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('primary-nav');
+
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        const isOpen = nav.getAttribute('data-state') === 'open';
+        nav.setAttribute('data-state', isOpen ? 'closed' : 'open');
+        toggle.setAttribute('aria-expanded', String(!isOpen));
+        document.body.classList.toggle('nav-open', !isOpen);
+      });
+
+      // Cerrar menú al navegar (mobile)
+      nav.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          nav.setAttribute('data-state','closed');
+          toggle.setAttribute('aria-expanded','false');
+          document.body.classList.remove('nav-open');
+        });
+      });
+    }
+
+    // Construcción de links de WhatsApp
+    function waLink(msg) {
+      return `https://wa.me/${WHATSAPP_NUMBER_E164}?text=${encodeURIComponent(msg)}`;
+    }
+    // CTA hero / contacto
+    setHrefIfExists('cta-hero', waLink(WHATSAPP_MSG_BASE));
+    setHrefIfExists('cta-contacto', waLink(WHATSAPP_MSG_BASE));
+
+    // Botones de cada card con mensaje contextual
+    document.querySelectorAll('.wa').forEach(btn => {
+      const context = btn.dataset.wa || 'Consulta';
+      const msg = `Hola Jure Travel 👋, quiero info de ${context}.`;
+      btn.href = waLink(msg);
+    });
+
+    // Datos del titular
+    setTextIfExists('owner-name', OWNER_NAME);
+    setTextIfExists('owner-cuil', OWNER_CUIL);
+    setTextIfExists('alias-text', ALIAS_PAGO);
+
+    // Copiar al portapapeles (con fallback si no hay HTTPS)
+    async function copyToClipboard(text){
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(text);
+        } else {
+          const ta = document.createElement('textarea');
+          ta.value = text;
+          ta.style.position = 'fixed';
+          ta.style.top = '-1000px';
+          document.body.appendChild(ta);
+          ta.focus();
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+        }
+        showCopyFeedback('Copiado ✅');
+      } catch (e) {
+        console.error('No se pudo copiar', e);
+        showCopyFeedback('No se pudo copiar ❌');
+      }
+    }
+
+    function showCopyFeedback(msg){
+      const feedback = $id('copy-feedback');
+      if (!feedback) return;
+      feedback.textContent = msg;
+      setTimeout(()=> feedback.textContent = '', 1500);
+    }
+
+    // Delegación: cualquier botón con data-copy
+    document.addEventListener('click', (ev) => {
+      const btn = ev.target.closest('[data-copy]');
+      if (!btn) return;
+      const sel = btn.getAttribute('data-copy');
+      const target = document.querySelector(sel);
+      if (target) copyToClipboard(target.textContent.trim());
+    });
+
+    // Año dinámico
+    setTextIfExists('year', new Date().getFullYear());
+
+    // Scroll suave (respaldo)
+    document.documentElement.style.scrollBehavior = 'smooth';
+  </script>
+</body>
+</html>
