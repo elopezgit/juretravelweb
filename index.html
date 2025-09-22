@@ -110,23 +110,46 @@
     </section>
 
     <!-- ============ Pagos ============ -->
-    <section class="section section-alt" id="pagos" aria-labelledby="pagos-title">
-      <div class="container pagos">
-        <h2 id="pagos-title" class="section-title">Datos de pago</h2>
-        <p class="muted">Usá estos datos para transferencias/depósitos de forma rápida y segura.</p>
+<section class="section section-alt" id="pagos" aria-labelledby="pagos-title">
+  <div class="container pagos">
+    <h2 id="pagos-title" class="section-title">Datos de pago</h2>
+    <p class="muted">Usá estos datos para transferencias/depósitos de forma rápida y segura.</p>
 
-        <div class="owner">
-          <p><strong>Titular:</strong> <span id="owner-name">Matías Javier Fernández Jure</span></p>
-          <p><strong>CUIL:</strong> <span id="owner-cuil">20-32460762-6</span></p>
-        </div>
+    <!-- Titular -->
+    <div class="owner">
+      <p><strong>Titular:</strong> <span id="owner-name">Matías Javier Fernández Jure</span></p>
+      <p><strong>CUIL:</strong> <span id="owner-cuil">20-32460762-6</span></p>
+    </div>
 
-        <div class="copy-row">
-          <button class="btn btn-ghost" data-copy="#alias-text">Copiar alias</button>
-          <span id="alias-text" class="mono">juretravel.alias</span>
-        </div>
-        <p class="sr-only" aria-live="polite" id="copy-feedback"></p>
-      </div>
-    </section>
+    <!-- Caja de ahorro en pesos -->
+    <div class="copy-row">
+      <button class="btn btn-ghost" data-copy="#alias-pesos">Copiar alias (Caja de ahorro $)</button>
+      <span id="alias-pesos" class="mono">mfjure9</span>
+    </div>
+
+    <!-- Caja de ahorro en USD -->
+    <div class="copy-row">
+      <button class="btn btn-ghost" data-copy="#alias-usd">Copiar alias (Caja de ahorro USD)</button>
+      <span id="alias-usd" class="mono">FARO.CHISPA.BOLETO</span>
+    </div>
+
+    <!-- Métodos aceptados -->
+    <div class="payment-methods">
+      <h3 class="section-subtitle">Medios de pago aceptados</h3>
+      <ul>
+        <li>Tarjetas de débito</li>
+        <li>Tarjetas de crédito</li>
+        <li>Transferencia bancaria</li>
+        <li>Efectivo en pesos</li>
+        <li>Efectivo en dólares</li>
+      </ul>
+    </div>
+
+    <!-- Feedback accesible -->
+    <p class="sr-only" aria-live="polite" id="copy-feedback"></p>
+  </div>
+</section>
+
 
     <!-- ============ Contacto / CTA secundario ============ -->
     <section class="section container" id="contacto" aria-label="Contacto">
