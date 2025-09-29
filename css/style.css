@@ -276,8 +276,57 @@ body.nav-open{ overflow:hidden; }
 .footer-links{ list-style:none; padding:0; margin:0; display:flex; gap:12px; }
 .footer-links a{ padding:6px 10px; border-radius:10px; background: rgba(255,255,255,.06); }
 .footer-links a:hover{ background: rgba(255,255,255,.12); }
+.social-buttons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.social-item {
+  text-align: center;
+}
+
+.btn-social {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 0.5rem;
+}
+
+.btn-social:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+/* Colores oficiales */
+.btn-social.instagram {
+  background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #962fbf, #4f5bd5);
+}
+
+.btn-social.facebook {
+  background-color: #1877f2;
+}
+
+.social-item p {
+  font-size: 14px;
+  margin: 0;
+  color: #fff;
+}
+
+
+
 
 /* Mejora de área interactiva en mobile */
 @media (hover: none){
   .btn, .nav a{ padding-top:14px; padding-bottom:14px; }
 }
+
+
