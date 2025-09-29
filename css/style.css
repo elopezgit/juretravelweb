@@ -322,6 +322,51 @@ body.nav-open{ overflow:hidden; }
 }
 
 
+.footer-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.footer-links li {
+  display: inline-block;
+}
+
+/* Reutilizamos estilos previos */
+.btn-social {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-social:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.btn-social.instagram {
+  background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #962fbf, #4f5bd5);
+}
+
+.btn-social.facebook {
+  background-color: #1877f2;
+}
+
+.btn-social.email {
+  background-color: #e63946; /* rojo para email */
+}
+
+
 
 
 /* Mejora de área interactiva en mobile */
