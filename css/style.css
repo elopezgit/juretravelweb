@@ -367,7 +367,59 @@ body.nav-open{ overflow:hidden; }
 }
 
 
+/* ============ Promos (banner grid) ============ */
+.promos-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+@media (min-width: 768px){ .promos-grid{ grid-template-columns: repeat(2, 1fr); gap: var(--space-3);} }
+@media (min-width: 1200px){ .promos-grid{ grid-template-columns: repeat(4, 1fr);} }
 
+.promo-card{
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--color-card);
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: var(--shadow-soft);
+  isolation: isolate;
+}
+.promo-card img{
+  width:100%;
+  height: 240px;
+  object-fit: cover;
+  display:block;
+  filter: saturate(.95) contrast(1.02);
+}
+@media (min-width: 576px){
+  .promo-card img{ height: 260px; }
+}
+@media (min-width: 992px){
+  .promo-card img{ height: 220px; }
+}
+
+.promo-overlay{
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 14px 14px 16px;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(8,12,24,.84) 32%, rgba(8,12,24,.96) 100%);
+  display: grid;
+  gap: 8px;
+}
+.promo-title{ margin:0; font-size: 1.05rem; letter-spacing:.2px; }
+.promo-text{ margin:0; color: var(--color-muted); font-size:.95rem; }
+.promo-overlay .btn{ margin-top: 4px; }
+
+.promo-card img {
+  width: 100%;
+  height: 100%;
+  max-height: 280px; /* permite flexibilidad */
+  object-fit: contain;
+  background: linear-gradient(180deg, #0f172a, #111b32);
+  border-radius: var(--radius);
+}
 
 /* Mejora de área interactiva en mobile */
 @media (hover: none){
