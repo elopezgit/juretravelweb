@@ -1,387 +1,152 @@
-<!-- archivo: index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Jure Travel — Viajar es vivir dos veces</title>
-  <meta name="description" content="Jure Travel: asesoría personalizada, paquetes al Caribe, Europa, Argentina y experiencias como Fórmula 1.">
-  <link rel="preload" as="style" href="css/style.css" />
+  <title>Jure Travel — Experiencias de Lujo</title>
+  <meta name="description" content="Asesoría de viajes personalizada. Caribe, Europa y los mejores destinos del mundo.">
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-  <meta property="og:title" content="Jure Travel" />
-  <meta property="og:description" content="Viajar es vivir dos veces. Asesoría personalizada y experiencias únicas." />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <a class="skip-link" href="#main">Saltar al contenido</a>
 
-  <!-- ============ Header fijo con menú hamburguesa ============ -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#" class="brand" aria-label="Inicio Jure Travel">Jure Travel</a>
-
-      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Abrir menú">
-        <span class="nav-toggle-bar" aria-hidden="true"></span>
-        <span class="nav-toggle-bar" aria-hidden="true"></span>
-        <span class="nav-toggle-bar" aria-hidden="true"></span>
-      </button>
-
-      <nav id="primary-nav" class="nav" data-state="closed">
-        <ul>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#quienes">Quiénes somos</a></li>
-          <li><a href="#pagos">Pagos</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
+  <header class="main-header">
+    <div class="container header-flex">
+      <a href="#" class="logo">JURE<span>TRAVEL</span></a>
+      <nav class="desktop-nav">
+        <a href="#destinos">Destinos</a>
+        <a href="#experiencias">Experiencias</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#pagos">Pagos</a>
       </nav>
+      <a href="#contacto" class="btn-minimal">Contacto</a>
+      <button class="menu-btn"><i class="fas fa-bars"></i></button>
     </div>
   </header>
 
-  <main id="main">
-    <!-- ============ Hero / Banner con Video ============ -->
-    <section class="hero" id="hero" aria-label="Banner principal">
-      <video class="hero-video" autoplay muted loop playsinline>
+  <main>
+    <section class="hero-v2">
+      <video autoplay muted loop playsinline class="bg-video">
         <source src="img/bannerCaribe.mp4" type="video/mp4">
-        Tu navegador no soporta el video en HTML5.
       </video>
-
       <div class="hero-overlay"></div>
-
-      <div class="hero-content container">
-        <!-- Logo circular transparente (marca de agua) -->
-        <img class="hero-logo-circle" src="img/juretravellogo.jfif" alt="" aria-hidden="true">
-
-        <h1 class="hero-title">Viajar es vivir dos veces.</h1>
-        <p class="hero-subtitle">Asesoría personalizada para que tu próxima experiencia sea perfecta.</p>
-        <a id="cta-hero" class="btn btn-accent" href="#" rel="noopener">Consultar por WhatsApp</a>
+      <div class="hero-body container">
+        <span class="badge">Agencia de Viajes</span>
+        <h1 class="reveal-text">Viajar es vivir <br> <span>dos veces.</span></h1>
+        <p>Diseñamos itinerarios a medida que transforman simples vacaciones en memorias eternas.</p>
+        <div class="hero-btns">
+          <a href="#destinos" class="btn-main">Explorar Destinos</a>
+          <a href="#" class="btn-wa-hero"><i class="fab fa-whatsapp"></i> Consultar Ahora</a>
+        </div>
       </div>
     </section>
 
-
-    <!-- ============ Redes Sociales ============ -->
-<!-- ============ Redes Sociales ============ -->
-<section class="section container" id="redes" aria-labelledby="redes-title">
-  <h2 id="redes-title" class="section-title">Seguinos en nuestras redes</h2>
-  <div class="social-buttons">
-    <!-- Instagram -->
-    <div class="social-item">
-      <a class="btn-social instagram" href="https://www.instagram.com/traveljure?igsh=bnVraWZ1OGF2MHY2" target="_blank" rel="noopener">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <p>Instagram</p>
-    </div>
-
-    <!-- Facebook -->
-    <div class="social-item">
-      <a class="btn-social facebook" href="https://www.facebook.com/share/16KJGQxMKy/?mibextid=wwXIfr" target="_blank" rel="noopener">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <p>Facebook</p>
-    </div>
-  </div>
-</section>
-
-
-
-
-    <!-- ============ Servicios (cards) ============ -->
-    <section class="section container" id="servicios" aria-labelledby="servicios-title">
-      <h2 id="servicios-title" class="section-title">Servicios y destinos</h2>
-      <div class="cards">
-        <!-- Caribe -->
-        <article class="card">
-          <img src="img/caribe1.jpg" loading="lazy" width="640" height="427">
-          <div class="card-body">
-            <h3 class="card-title">Caribe</h3>
-            <p class="card-text">Playas soñadas, all inclusive y experiencias únicas todo el año.</p>
-            <a class="btn btn-primary w-100 wa" data-wa="Caribe" href="#">Consultar por WhatsApp</a>
-          </div>
-        </article>
-        <!-- Europa -->
-        <article class="card">
-          <img src="img/pariseuropa.jpg" alt="Paisaje urbano clásico de Europa" loading="lazy" width="640" height="427">
-          <div class="card-body">
-            <h3 class="card-title">Europa</h3>
-            <p class="card-text">Historia, cultura y gastronomía en itinerarios a tu medida.</p>
-            <a class="btn btn-primary w-100 wa" data-wa="Europa" href="#">Consultar por WhatsApp</a>
-          </div>
-        </article>
-        <!-- Argentina -->
-        <article class="card">
-          <img src="img/argentinatravel.jpg" alt="Montañas y valles de Argentina" loading="lazy" width="640" height="427">
-          <div class="card-body">
-            <h3 class="card-title">Argentina</h3>
-            <p class="card-text">Norte, sur, vinos, nieve y mucho más. Redescubrí lo local.</p>
-            <a class="btn btn-primary w-100 wa" data-wa="Argentina" href="#">Consultar por WhatsApp</a>
-          </div>
-        </article>
-        <!-- Fórmula 1 -->
-        <article class="card">
-          <img src="img/f1.jpg" alt="Circuito de Fórmula 1" loading="lazy" width="640" height="427">
-          <div class="card-body">
-            <h3 class="card-title">Fórmula 1</h3>
-            <p class="card-text">Paquetes para vivir la F1 en vivo: vuelo, hotel y entradas.</p>
-            <a class="btn btn-primary w-100 wa" data-wa="Fórmula 1" href="#">Consultar por WhatsApp</a>
-          </div>
-        </article>
+    <section class="features container">
+      <div class="feat-card">
+        <i class="fas fa-map-marked-alt"></i>
+        <h3>Rutas Curadas</h3>
+        <p>Seleccionamos cada hotel y actividad personalmente.</p>
+      </div>
+      <div class="feat-card">
+        <i class="fas fa-headset"></i>
+        <h3>Soporte 24/7</h3>
+        <p>Te acompañamos desde el despegue hasta tu regreso.</p>
+      </div>
+      <div class="feat-card">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Viaje Seguro</h3>
+        <p>Asistencia médica y seguros de primer nivel incluidos.</p>
       </div>
     </section>
 
-
-
-    <!-- ============ Promociones actuales (banner 4-up) ============ -->
-<section class="section container" id="promos" aria-labelledby="promos-title">
-  <h2 id="promos-title" class="section-title">Promociones actuales</h2>
-
-  <div class="promos-grid">
-    <!-- Buzios -->
-    <article class="promo-card">
-      <img src="img/BrasilBuzios.jpeg" alt="Búzios — Pousada Maresia, 7 noches. Salidas 5, 12, 19 y 26 de enero 2026 desde Buenos Aires. USD 1.070" loading="lazy" width="1280" height="720">
-      <div class="promo-overlay">
-        <h3 class="promo-title">Búzios — Pousada Maresia</h3>
-        <p class="promo-text">7 noches · Salidas: 05/01, 12/01, 19/01, 26/01 · Desde Buenos Aires · USD 1.070</p>
-        <a class="btn btn-accent w-100 wa"
-           data-wa-msg="Hola Jure Travel 👋, quiero detalles de la promo BÚZIOS — Pousada Maresia (7 noches, USD 1.070). Salidas 5/12/19/26 de enero 2026 desde Buenos Aires. ¿Qué incluye y cómo reservo?"
-           href="#">Consultar</a>
-      </div>
-    </article>
-
-    <!-- Florianópolis -->
-    <article class="promo-card">
-      <img src="img/BrasilFloripa.jpeg" alt="Florianópolis — Hotel Canasvieiras, 7 noches. Salidas 13 y 23 de enero 2026 desde Buenos Aires. USD 1.210" loading="lazy" width="1280" height="720">
-      <div class="promo-overlay">
-        <h3 class="promo-title">Florianópolis — Canasvieiras</h3>
-        <p class="promo-text">7 noches · Salidas: 13/01 y 23/01 · Desde Buenos Aires · USD 1.210</p>
-        <a class="btn btn-accent w-100 wa"
-           data-wa-msg="Hola Jure Travel 👋, me interesa FLORIANÓPOLIS — Hotel Canasvieiras (7 noches, USD 1.210). Salidas 13 y 23 de enero 2026 desde Buenos Aires. ¿Disponibilidad y medios de pago?"
-           href="#">Consultar</a>
-      </div>
-    </article>
-
-    <!-- Porto Seguro -->
-    <article class="promo-card">
-      <img src="img/BrasilPortoSeguro.jpeg" alt="Porto Seguro — Hotel Canasvieiras, 6 noches. Salidas 4 y 11 de enero 2026 desde Buenos Aires. USD 1.340. Early check-in*" loading="lazy" width="1280" height="720">
-      <div class="promo-overlay">
-        <h3 class="promo-title">Porto Seguro</h3>
-        <p class="promo-text">6 noches · Salidas: 04/01 y 11/01 · Desde Buenos Aires · USD 1.340 · Early check-in*</p>
-        <a class="btn btn-accent w-100 wa"
-           data-wa-msg="Hola Jure Travel 👋, quiero cotizar PORTO SEGURO (6 noches, USD 1.340, early check-in). Salidas 4 y 11 de enero 2026 desde Buenos Aires. ¿Qué incluye y políticas?"
-           href="#">Consultar</a>
-      </div>
-    </article>
-
-    <!-- Río de Janeiro -->
-    <article class="promo-card">
-      <img src="img/BrasilRio.jpeg" alt="Río de Janeiro — Hotel Américas en Copacabana, 7 noches. Salida 12 de enero 2026 desde Tucumán. USD 1.700" loading="lazy" width="1280" height="720">
-      <div class="promo-overlay">
-        <h3 class="promo-title">Río de Janeiro — Copacabana</h3>
-        <p class="promo-text">7 noches · Salida: 12/01 · Desde Tucumán · USD 1.700</p>
-        <a class="btn btn-accent w-100 wa"
-           data-wa-msg="Hola Jure Travel 👋, pasen info de RÍO DE JANEIRO — Hotel Américas (Copacabana), 7 noches, salida 12/01/2026 desde Tucumán, USD 1.700. ¿Incluye desayunos y traslados?"
-           href="#">Consultar</a>
-      </div>
-    </article>
-  </div>
-</section>
-
-
-
-
-
-    <!-- ============ Quiénes somos ============ -->
-    <section class="section section-alt" id="quienes" aria-labelledby="quienes-title">
+    <section class="destinos" id="destinos">
       <div class="container">
-        <h2 id="quienes-title" class="section-title">Quiénes somos</h2>
-        <p>En <strong>Jure Travel</strong> armamos tu viaje como si fuera el nuestro. Combinamos experiencia, atención personalizada y proveedores confiables para que disfrutes sin preocupaciones.</p>
-        <p>Te acompañamos en cada paso: desde la idea, la elección de destinos y seguros, hasta el seguimiento durante tu viaje y tu regreso.</p>
+        <div class="section-intro">
+          <h2>Destinos Tendencia 2026</h2>
+          <p>Lugares que están definiendo el lujo y la aventura este año.</p>
+        </div>
+        
+        <div class="destinos-grid">
+          <div class="dest-item">
+            <img src="img/caribe1.jpg" alt="Caribe">
+            <div class="dest-info">
+              <h3>Paraíso Caribeño</h3>
+              <p>All Inclusive de autor & Playas vírgenes</p>
+              <button class="btn-explore wa-btn" data-dest="Caribe">Ver detalles</button>
+            </div>
+          </div>
+          <div class="dest-item">
+            <img src="img/pariseuropa.jpg" alt="Europa">
+            <div class="dest-info">
+              <h3>Cultura Europea</h3>
+              <p>Historia, arte y gastronomía Michelin</p>
+              <button class="btn-explore wa-btn" data-dest="Europa">Ver detalles</button>
+            </div>
+          </div>
+          <div class="dest-item">
+            <img src="img/f1.jpg" alt="F1">
+            <div class="dest-info">
+              <h3>Fórmula 1 Experience</h3>
+              <p>Adrenalina en los mejores circuitos del mundo</p>
+              <button class="btn-explore wa-btn" data-dest="Fórmula 1">Ver detalles</button>
+            </div>
+          </div>
+          <div class="dest-item">
+            <img src="img/BrasilRio.jpeg" alt="Brasil">
+            <div class="dest-info">
+              <h3>Brasil Exclusivo</h3>
+              <p>Río, Búzios y rincones secretos</p>
+              <button class="btn-explore wa-btn" data-dest="Brasil">Ver detalles</button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- ============ Pagos ============ -->
-<section class="section section-alt" id="pagos" aria-labelledby="pagos-title">
-  <div class="container pagos">
-    <h2 id="pagos-title" class="section-title">Datos de pago</h2>
-    <p class="muted">Usá estos datos para transferencias/depósitos de forma rápida y segura.</p>
-
-    <!-- Titular -->
-    <div class="owner">
-      <p><strong>Titular:</strong> <span id="owner-name">Matías Javier Fernández Jure</span></p>
-      <p><strong>CUIL:</strong> <span id="owner-cuil">20-32460762-6</span></p>
-    </div>
-
-    <!-- Caja de ahorro en pesos -->
-    <div class="copy-row">
-      <button class="btn btn-ghost" data-copy="#alias-pesos">Copiar alias (Caja de ahorro $)</button>
-      <span id="alias-pesos" class="mono">mfjure9</span>
-    </div>
-
-    <!-- Caja de ahorro en USD -->
-    <div class="copy-row">
-      <button class="btn btn-ghost" data-copy="#alias-usd">Copiar alias (Caja de ahorro USD)</button>
-      <span id="alias-usd" class="mono">FARO.CHISPA.BOLETO</span>
-    </div>
-
-    <!-- Métodos aceptados -->
-    <div class="payment-methods">
-      <h3 class="section-subtitle">Medios de pago aceptados</h3>
-      <ul>
-        <li>Tarjetas de débito</li>
-        <li>Tarjetas de crédito</li>
-        <li>Transferencia bancaria</li>
-        <li>Efectivo en pesos</li>
-        <li>Efectivo en dólares</li>
-      </ul>
-    </div>
-
-    <!-- Feedback accesible -->
-    <p class="sr-only" aria-live="polite" id="copy-feedback"></p>
-  </div>
-</section>
-
-
-    <!-- ============ Contacto / CTA secundario ============ -->
-    <section class="section container" id="contacto" aria-label="Contacto">
-      <div class="cta-box">
-        <h2 class="section-title">¿Listo para viajar?</h2>
-        <p>Escribinos por WhatsApp y te asesoramos al instante.</p>
-        <a id="cta-contacto" class="btn btn-accent" href="#" rel="noopener">Abrir WhatsApp</a>
+    <section class="payment-section" id="pagos">
+      <div class="container glass-box">
+        <div class="pay-header">
+          <h2>Gestión de Pagos</h2>
+          <p>Transacciones seguras y múltiples canales de financiación.</p>
+        </div>
+        <div class="pay-grid">
+          <div class="pay-info">
+            <div class="info-item">
+              <label>Titular</label>
+              <p>Matías Javier Fernández Jure</p>
+            </div>
+            <div class="info-item">
+              <label>CUIL</label>
+              <p>20-32460762-6</p>
+            </div>
+          </div>
+          <div class="pay-actions">
+            <button class="copy-btn" data-copy="mfjure9">Copiar Alias Pesos <i class="far fa-copy"></i></button>
+            <button class="copy-btn" data-copy="FARO.CHISPA.BOLETO">Copiar Alias USD <i class="far fa-copy"></i></button>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- ============ Footer ============ -->
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <p>© <span id="year"></span> Jure Travel. Todos los derechos reservados.</p>
-    <nav aria-label="Redes">
-      <ul class="footer-links">
-        <li>
-          <a class="btn-social instagram" href="https://www.instagram.com/traveljure?igsh=bnVraWZ1OGF2MHY2" target="_blank" rel="noopener" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-        </li>
-        <li>
-          <a class="btn-social facebook" href="https://www.facebook.com/share/16KJGQxMKy/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-        </li>
-        <li>
-          <a class="btn-social email" href="mailto:contacto@juretravel.com" aria-label="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</footer>
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <h3>JURE<span>TRAVEL</span></h3>
+        <p>Expertos en crear momentos que duran para siempre.</p>
+      </div>
+      <div class="footer-social">
+        <a href="https://instagram.com/traveljure" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="mailto:contacto@juretravel.com"><i class="far fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Jure Travel. Design by AI Collaboration.</p>
+    </div>
+  </footer>
 
-
-  <!-- ============ JS mínimo (robusto) ============ -->
-  <script>
-    // ===== Variables editables =====
-    const WHATSAPP_NUMBER_E164 = '5493812061066'; // sin "+"
-    const WHATSAPP_MSG_BASE = 'Hola Jure Travel 👋, quiero hacer una consulta.';
-    const OWNER_NAME = 'Matías Jure';
-    const OWNER_CUIL = '20-32460762-6';
-    const ALIAS_PAGO = 'juretravel.alias';
-
-    // Utilidades
-    const $id = (x) => document.getElementById(x);
-    const setHrefIfExists = (id, href) => { const el = $id(id); if (el) el.href = href; };
-    const setTextIfExists = (id, text) => { const el = $id(id); if (el) el.textContent = text; };
-
-    // Compensación de anclas bajo header fijo
-    document.querySelectorAll('section, .section-title').forEach(el => {
-      el.style.scrollMarginTop = '80px';
-    });
-
-    // Menú hamburguesa accesible
-    const toggle = document.querySelector('.nav-toggle');
-    const nav = document.getElementById('primary-nav');
-
-    if (toggle && nav) {
-      toggle.addEventListener('click', () => {
-        const isOpen = nav.getAttribute('data-state') === 'open';
-        nav.setAttribute('data-state', isOpen ? 'closed' : 'open');
-        toggle.setAttribute('aria-expanded', String(!isOpen));
-        document.body.classList.toggle('nav-open', !isOpen);
-      });
-
-      // Cerrar menú al navegar (mobile)
-      nav.querySelectorAll('a').forEach(a => {
-        a.addEventListener('click', () => {
-          nav.setAttribute('data-state','closed');
-          toggle.setAttribute('aria-expanded','false');
-          document.body.classList.remove('nav-open');
-        });
-      });
-    }
-
-    // Construcción de links de WhatsApp
-    function waLink(msg) {
-      return `https://wa.me/${WHATSAPP_NUMBER_E164}?text=${encodeURIComponent(msg)}`;
-    }
-    // CTA hero / contacto
-    setHrefIfExists('cta-hero', waLink(WHATSAPP_MSG_BASE));
-    setHrefIfExists('cta-contacto', waLink(WHATSAPP_MSG_BASE));
-
-    // Botones de cada card con mensaje contextual
-    document.querySelectorAll('.wa').forEach(btn => {
-      const context = btn.dataset.wa || 'Consulta';
-      const msg = `Hola Jure Travel 👋, quiero info de ${context}.`;
-      btn.href = waLink(msg);
-    });
-
-    // Datos del titular
-    setTextIfExists('owner-name', OWNER_NAME);
-    setTextIfExists('owner-cuil', OWNER_CUIL);
-    setTextIfExists('alias-text', ALIAS_PAGO);
-
-    // Copiar al portapapeles (con fallback si no hay HTTPS)
-    async function copyToClipboard(text){
-      try {
-        if (navigator.clipboard && window.isSecureContext) {
-          await navigator.clipboard.writeText(text);
-        } else {
-          const ta = document.createElement('textarea');
-          ta.value = text;
-          ta.style.position = 'fixed';
-          ta.style.top = '-1000px';
-          document.body.appendChild(ta);
-          ta.focus();
-          ta.select();
-          document.execCommand('copy');
-          document.body.removeChild(ta);
-        }
-        showCopyFeedback('Copiado ✅');
-      } catch (e) {
-        console.error('No se pudo copiar', e);
-        showCopyFeedback('No se pudo copiar ❌');
-      }
-    }
-
-    function showCopyFeedback(msg){
-      const feedback = $id('copy-feedback');
-      if (!feedback) return;
-      feedback.textContent = msg;
-      setTimeout(()=> feedback.textContent = '', 1500);
-    }
-
-    // Delegación: cualquier botón con data-copy
-    document.addEventListener('click', (ev) => {
-      const btn = ev.target.closest('[data-copy]');
-      if (!btn) return;
-      const sel = btn.getAttribute('data-copy');
-      const target = document.querySelector(sel);
-      if (target) copyToClipboard(target.textContent.trim());
-    });
-
-    // Año dinámico
-    setTextIfExists('year', new Date().getFullYear());
-
-    // Scroll suave (respaldo)
-    document.documentElement.style.scrollBehavior = 'smooth';
-  </script>
+  <script src="js/app.js"></script>
 </body>
 </html>
