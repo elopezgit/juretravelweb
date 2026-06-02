@@ -172,6 +172,10 @@ p {
     transform: scale(1.05);
 }
 
+.hide-mobile {
+    display: inline;
+}
+
 /* ==========================================================================
    SPLASH SCREEN (PREMIUM LOADING INTRO)
    ========================================================================== */
@@ -1958,7 +1962,51 @@ p {
     }
     
     .destinos-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .destinos-card {
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-sm);
+    }
+
+    .destinos-img-wrapper {
+        height: 100px;
+    }
+
+    .destinos-badge {
+        top: 8px;
+        left: 8px;
+        font-size: 0.6rem;
+        padding: 3px 6px;
+    }
+
+    .destinos-body {
+        padding: 10px;
+    }
+
+    .destinos-body h3 {
+        font-size: 0.95rem;
+        margin-bottom: 4px;
+        letter-spacing: -0.2px;
+    }
+
+    .destinos-body p {
+        font-size: 0.72rem;
+        line-height: 1.35;
+        margin-bottom: 8px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        height: 4em; /* Enforces uniform size for description block */
+    }
+
+    .btn-card-wa {
+        padding: 8px 10px;
+        font-size: 0.72rem;
+        gap: 4px;
     }
     
     .presupuestador-card {

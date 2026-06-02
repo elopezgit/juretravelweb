@@ -257,11 +257,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (successCode) successCode.textContent = codeString;
             if (successModal) successModal.classList.add('show');
             
-            // Automatically open WhatsApp in new window after short pause
-            setTimeout(() => {
-                window.open(lastGeneratedWaUrl, '_blank');
-            }, 600);
-            
             // Reset form
             budgetForm.reset();
             // Restore passenger counters defaults
