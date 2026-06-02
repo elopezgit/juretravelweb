@@ -155,6 +155,36 @@ document.addEventListener('DOMContentLoaded', () => {
     setupCounter('babies');
 
     // ==========================================================================
+    // 4.5. DYNAMIC CUSTOM SELECT HANDLERS ("OTHER..." WRITE-IN OPTIONS)
+    // ==========================================================================
+    const setupCustomSelectOther = (selectId, containerId, inputId, otherValues) => {
+        const selectEl = document.getElementById(selectId);
+        const containerEl = document.getElementById(containerId);
+        const inputEl = document.getElementById(inputId);
+        
+        if (!selectEl || !containerEl || !inputEl) return;
+        
+        selectEl.addEventListener('change', () => {
+            if (otherValues.includes(selectEl.value)) {
+                containerEl.style.display = 'block';
+                inputEl.required = true;
+                setTimeout(() => {
+                    inputEl.focus({ preventScroll: true });
+                }, 100);
+            } else {
+                containerEl.style.display = 'none';
+                inputEl.required = false;
+                inputEl.value = '';
+            }
+        });
+    };
+
+    setupCustomSelectOther('destino', 'destino_otro_container', 'destino_otro', ['Otro Destino Internacional']);
+    setupCustomSelectOther('categoria_estrellas', 'categoria_estrellas_otro_container', 'categoria_estrellas_otro', ['Otro']);
+    setupCustomSelectOther('regimen_comidas', 'regimen_comidas_otro_container', 'regimen_comidas_otro', ['Otro']);
+    setupCustomSelectOther('presupuesto_estimado', 'presupuesto_estimado_otro_container', 'presupuesto_estimado_otro', ['Otro']);
+
+    // ==========================================================================
     // 5. BUDGET FORM SUBMISSION & SERIAL GENERATOR
     // ==========================================================================
     const budgetForm = document.getElementById('presupuestoForm');
@@ -187,7 +217,15 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Gather travel data
             const origen = document.getElementById('origen').value.trim();
-            const destino = document.getElementById('destino').value;
+            
+            let destino = document.getElementById('destino').value;
+            if (destino === 'Otro Destino Internacional') {
+                const destinoOtroVal = document.getElementById('destino_otro').value.trim();
+                if (destinoOtroVal) {
+                    destino = `Otro (${destinoOtroVal})`;
+                }
+            }
+            
             const fechaIda = document.getElementById('fecha_ida').value;
             const fechaRegreso = document.getElementById('fecha_regreso').value;
             const flexFechas = document.getElementById('flexibilidad').checked ? 'Sí' : 'No';
@@ -211,11 +249,30 @@ document.addEventListener('DOMContentLoaded', () => {
             const servicesString = services.length > 0 ? services.join(', ') : 'Ninguno seleccionado';
             
             // Accommodation
-            const categoria = document.getElementById('categoria_estrellas').value;
-            const regimen = document.getElementById('regimen_comidas').value;
+            let categoria = document.getElementById('categoria_estrellas').value;
+            if (categoria === 'Otro') {
+                const categoriaOtroVal = document.getElementById('categoria_estrellas_otro').value.trim();
+                if (categoriaOtroVal) {
+                    categoria = `Otro (${categoriaOtroVal})`;
+                }
+            }
+            
+            let regimen = document.getElementById('regimen_comidas').value;
+            if (regimen === 'Otro') {
+                const regimenOtroVal = document.getElementById('regimen_comidas_otro').value.trim();
+                if (regimenOtroVal) {
+                    regimen = `Otro (${regimenOtroVal})`;
+                }
+            }
             
             // Budget Estimative
-            const rangoPresupuesto = document.getElementById('presupuesto_estimado').value;
+            let rangoPresupuesto = document.getElementById('presupuesto_estimado').value;
+            if (rangoPresupuesto === 'Otro') {
+                const presupuestoOtroVal = document.getElementById('presupuesto_estimado_otro').value.trim();
+                if (presupuestoOtroVal) {
+                    rangoPresupuesto = `Otro (${presupuestoOtroVal})`;
+                }
+            }
             const comentarios = document.getElementById('comentarios').value.trim() || 'Sin comentarios adicionales.';
             
             // Compile Date/Time
@@ -259,6 +316,22 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Reset form
             budgetForm.reset();
+            
+            // Hide custom write-in other fields
+            const customContainers = ['destino_otro_container', 'categoria_estrellas_otro_container', 'regimen_comidas_otro_container', 'presupuesto_estimado_otro_container'];
+            const customInputs = ['destino_otro', 'categoria_estrellas_otro', 'regimen_comidas_otro', 'presupuesto_estimado_otro'];
+            
+            customContainers.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.style.display = 'none';
+            });
+            customInputs.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.required = false;
+                    el.value = '';
+                }
+            });
             // Restore passenger counters defaults
             document.getElementById('input-adults').value = 1;
             document.getElementById('val-adults').textContent = 1;
